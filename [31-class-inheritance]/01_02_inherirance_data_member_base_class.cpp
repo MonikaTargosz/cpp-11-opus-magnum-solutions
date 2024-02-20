@@ -34,9 +34,11 @@ class A
 /**
  * @brief Class B inherits class A with member function f 
  * to set the non-private data member of class A
+ * 
+ * In the list of class origins, we set the names of the base classes.
  */
 
-class B : public A
+class B : public A //list of class origins
 {
     public:
         void f();   
