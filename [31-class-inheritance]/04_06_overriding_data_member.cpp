@@ -49,7 +49,8 @@ void A::f()
 
 void B::f()
 {
-   
+   /* The derived class does not inherit the private data members of the base class.*/
+
     //m_prvt = 4; //error: ‘int A::m_prvt’ is private within this context
     m_prtctd = 5;
     m_pblc = 6;
@@ -64,6 +65,8 @@ void B::f()
 int main()
 {
     B b;
+
+    /* There is no inheritance of objects, there is only inheritance of classes.*/
     b.f();
-    b.A::f();
+    b.A::f(); 
 }
