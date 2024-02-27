@@ -19,7 +19,6 @@ class K				// class – simple aggregate
 - no base classes and no virtual functions.
 */
 
-
 public:
     double		capacitor[70];
 };
@@ -40,7 +39,9 @@ int main()
         K{ {2.4, 3.3, 33.0} },				
         K{  },							
         K{ {2.4, 3.3, 33.0} },      // data for pcb[4]
-        { }										
+        { }							
+        /* S04. Brackets separating the expressions initialising 
+        the individual elements of the array are not necessary.*/			
     };
 
     for(unsigned int i = 0; i < 20 ; ++i) 
