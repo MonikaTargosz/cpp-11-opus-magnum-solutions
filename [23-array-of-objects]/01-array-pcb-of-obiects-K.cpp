@@ -13,6 +13,13 @@
 
 class K				// class – simple aggregate  	
 {
+/* S02. This class is aggregate, because:
+- there are no private or protected member-data,
+- there are no user-defined constructors,
+- no base classes and no virtual functions.
+*/
+
+
 public:
     double		capacitor[70];
 };
@@ -24,7 +31,9 @@ int main()
      * @brief A 20-element array of objects of this class K is defined. 
      */
 
-    K  pcb [20] = 										 
+    constexpr int pcb_amount = 20;
+
+    K  pcb [pcb_amount] = 										 
     {
         K{ {2.4, 3.3} },			// data for pcb[0]
         K{ },				        // data for pcb[1] 
